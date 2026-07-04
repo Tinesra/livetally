@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-navy: #002147;
+  --color-gold: #FFD700;
+  --color-navy-light: #003366;
+  --color-gold-dark: #ccac00;
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 font-sans antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-2 bg-navy text-white rounded-md shadow-sm hover:bg-navy-light transition-all font-bold uppercase tracking-wide text-sm flex items-center justify-center gap-2;
+  }
+  
+  .btn-secondary {
+    @apply px-6 py-2 bg-gold text-navy rounded-md shadow-sm hover:bg-gold-dark transition-all font-bold uppercase tracking-wide text-sm flex items-center justify-center gap-2;
+  }
+
+  .btn-outline {
+    @apply px-6 py-2 bg-white text-navy border border-navy rounded-md shadow-sm hover:bg-slate-50 transition-all font-bold uppercase tracking-wide text-sm flex items-center justify-center gap-2;
+  }
+
+  .card {
+    @apply bg-white border border-slate-200 rounded-xl shadow-xs p-6;
+  }
+
+  .input-field {
+    @apply w-full bg-white border border-slate-300 rounded-md px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-navy/20 focus:border-navy transition-all;
+  }
+
+  .label-text {
+    @apply block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1.5;
+  }
+}
+
+@utility scrollbar-hidden {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

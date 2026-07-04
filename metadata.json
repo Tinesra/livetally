@@ -1,0 +1,6 @@
+{
+  "name": "COMELEC Live Tally",
+  "description": "School election live vote-counting tracker for manual paper ballot aggregations per section and strand.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
